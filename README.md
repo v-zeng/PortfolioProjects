@@ -94,11 +94,24 @@ The primary goal of the SQL queries in this project is to explore the COVID-19 d
    group by country
    order by total_death_count desc;
 
- 5. **Total death count per country:
-   This query calculates the total death count for each country, ordered by the highest death count.
+6. **Total death count per continent:
+   This query calculates the total death count for each continent, ordered by the highest death count.
    ```sql
    select country, max(total_deaths) as total_death_count
    from PortfolioProject..CovidDeaths
-   where continent is not null
+   where continent is null and country in ('Europe', 'North America', 'South America', 'Asia', 'Africa', 'Oceania')
    group by country
    order by total_death_count desc;
+
+7. **Global daily COVID-19 death rate:
+   This query calculates the global daily death rate by dividing the sum of new deaths by the sum of new cases.
+   ```sql
+   select date, sum(new_cases) as total_cases, sum(new_deaths) as total_deaths, 
+   case
+     when sum(new_cases) = 0 then null
+     else sum(new_deaths)/sum(new_cases) * 100
+   end as death_rate
+   from PortfolioProject..CovidDeaths
+   where continent is not null
+   group by date
+   order by date;
