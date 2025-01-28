@@ -195,3 +195,37 @@ The primary goal of the SQL queries in this project is to explore the COVID-19 d
     
     Select *
     From PercentPopVaccinated
+
+### SQL Techniques and Methods Used
+
+## Joins
+
+Throughout this project, `JOIN` operations were used to combine data from the `CovidDeaths` and `CovidVaccinations` tables, enabling a comprehensive analysis of both infection and vaccination metrics.
+
+## Window Functions
+
+We utilized window functions like `SUM(...) OVER (PARTITION BY ...)` to calculate cumulative vaccinations over time for each country. This technique is essential for analyzing sequential data and tracking the progression of vaccinations.
+
+## CTEs (Common Table Expressions)
+CTEs were used to organize and simplify queries. By creating temporary result sets that can be referenced within a larger query, CTEs enhance query readability and maintainability.
+
+## Temporary Tables
+Temporary tables were employed to store intermediate results, which are queried to calculate vaccination percentages. These tables are useful for breaking down complex queries into more manageable parts.
+
+## Aggregation and Conditional Calculations
+Aggregation functions like `SUM()`, `MAX()`, and `CASE` statements were used to calculate death rates, infection rates, and vaccination percentages. These functions helped provide a more comprehensive view of the pandemic’s impact.
+
+### Performance Considerations
+
+As the dataset is large and spans multiple years, performance optimizations were considered during the query construction. For example:
+
+* **Window Functions**: Used for efficient cumulative calculations, such as the cumulative vaccinations for each country.
+* **Temporary Tables and Views**: These structures were used to simplify repetitive calculations, making the overall query execution more efficient.
+
+### Next Steps and Future Extensions
+
+This project could be further extended by:
+
+* Analyzing the Correlation Between Vaccination and Infection Rates: Exploring whether countries with higher vaccination rates experienced lower infection or death rates.
+* Visualizing Data: A Tableau visualization will provide an intuitive, interactive way to explore these insights.
+* Time-Series Analysis: Adding time-series analysis to track trends over months or years would provide a clearer picture of how the pandemic evolved globally.
