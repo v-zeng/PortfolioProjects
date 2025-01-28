@@ -52,9 +52,7 @@ The primary goal of the SQL queries in this project is to explore the COVID-19 d
 ### Query Breakdown and Purpose
 
 1. **Select data for use:**
-
    This query retrieves the basic data required for analysis, including total cases, new cases, total deaths, and population, ordered by country and date.
-
    ```sql
    select country, date, total_cases, new_cases, total_deaths, population
    from PortfolioProject..CovidDeaths
@@ -139,7 +137,7 @@ The primary goal of the SQL queries in this project is to explore the COVID-19 d
    where a.continent is not null
    order by a.country, a.date;
    
-10. **Using Common Table Expression (CTE) to examine percentage of population vaccinated:***
+10. **Using Common Table Expression (CTE) to examine percentage of population vaccinated:**
    This query uses a CTE to calculate the cumulative number of vaccinations and the percentage of the population vaccinated.
     ```sql
     with pop_vaccinated (Continent, Country, Date, Population, New_vaccinations, Cumulative_vaccinations)
