@@ -228,4 +228,5 @@ This project could be further extended by:
 
 * Analyzing the Correlation Between Vaccination and Infection Rates: Exploring whether countries with higher vaccination rates experienced lower infection or death rates.
 * Visualizing Data: A Tableau visualization will provide an intuitive, interactive way to explore these insights.
+    *Update: [Tableau dashboard](https://public.tableau.com/app/profile/vinson.z/viz/COVID-19Dashboard_17389047036450/Dashboard1?publish=yes) for this project 
 * Time-Series Analysis: Adding time-series analysis to track trends over months or years would provide a clearer picture of how the pandemic evolved globally.
