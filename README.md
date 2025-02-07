@@ -228,7 +228,7 @@ As the dataset is large and spans multiple years, performance optimizations were
 
 * A Tableau dashboard for this project can be found [here](https://public.tableau.com/app/profile/vinson.z/viz/COVID-19Dashboard_17389047036450/Dashboard1?publish=yes).
 
-* ### Next Steps and Future Extensions
+### Next Steps and Future Extensions
 
 This project could be further extended by:
 
